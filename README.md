@@ -54,8 +54,8 @@ We use **Neo4j**, a graph database, because it enables efficient storage and que
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/bandirishi23/claudron-insight-extractor.git
-cd claudron-insight-extractor
+git clone https://github.com/bandirishi23/culldron-insight-extractor.git
+cd culldron-insight-extractor
 ```
 
 2. Install dependencies:
