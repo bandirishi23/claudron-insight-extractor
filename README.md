@@ -69,6 +69,9 @@ Create a `.env` file with the following variables:
 NEO4J_URI=<your-neo4j-uri>
 NEO4J_USERNAME=<your-neo4j-username>
 NEO4J_PASSWORD=<your-neo4j-password>
+
+# Set TOP_THEMES=-1 to use all sentences, or a positive integer like 2 or 5. (Default is 2)
+TOP_THEMES=2
 ```
 
 ## Running the Application
