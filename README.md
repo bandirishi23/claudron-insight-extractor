@@ -91,6 +91,11 @@ uvicorn app.main:app --reload
 docker-compose up --build
 ```
 
+###After running your FastAPI app, visit:
+
+Swagger UI: http://localhost:8000/docs
+ReDoc: http://localhost:8000/redoc
+
 ## API Endpoints
 
 ### POST /ingest
@@ -106,6 +111,7 @@ Retrieve all identified themes.
 Get timeline of posts for a specific theme.
 - **Input**: Theme ID
 - **Output**: Chronological list of posts associated with the theme
+
 
 ## Design Decisions
 
