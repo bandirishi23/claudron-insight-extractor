@@ -2,14 +2,38 @@
 
 A FastAPI-based application that ingests RSS feeds, extracts key theses from articles, and clusters them into themes using natural language processing and machine learning techniques.
 
-## Features
+---
 
-- RSS feed ingestion and parsing
-- Natural Language Processing (NLP) for thesis extraction
-- Semantic clustering of theses into themes
-- Neo4j graph database integration for data persistence
-- RESTful API endpoints for data access
-- Docker containerization support
+## Why Neo4j?
+
+We use **Neo4j**, a graph database, because it enables efficient storage and querying of complex relationships between content, ideas, and themes — something that would be cumbersome with traditional relational databases.
+
+### Key reasons:
+
+-   **Natural Graph Structure**: Posts contain multiple theses, and theses belong to themes. This 3-level structure maps cleanly to a graph:
+    -   `(Post)-[:HAS_THESIS]->(Thesis)-[:BELONGS_TO]->(Theme)`
+-   **Semantic Connectivity**: Enables graph traversal queries like:
+    -   "Show all thesis statements under a theme"
+    -   "Trace a theme's evolution over time"
+-   **Performance**: Graph databases outperform SQL for deep-link queries (e.g., `k`-hop relationships) due to index-free adjacency.
+
+###  Metrics that benefit from Neo4j:
+-   Time-series trends of content under a theme
+-   Post counts per theme over time
+-   Semantic density or node degree of a theme (how many theses connect to it)
+-   Clustering coefficient to identify highly connected thematic pockets
+-   Query latency when resolving related content across layers (theses → themes → posts)
+
+---
+
+##  Features
+
+-    Ingests blog/news articles via RSS feeds  
+-    Extracts key thesis sentences using Sentence Transformers  
+-    Clusters thesis statements based on semantic similarity (cosine distance)  
+-    Persists content and relationships in a Neo4j graph  
+-    Provides REST endpoints for querying themes and timelines  
+
 
 ## Tech Stack
 
