@@ -54,8 +54,8 @@ We use **Neo4j**, a graph database, because it enables efficient storage and que
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/bandirishi23/claudron-insight-extractor.git
+cd claudron-insight-extractor
 ```
 
 2. Install dependencies:
@@ -91,9 +91,9 @@ uvicorn app.main:app --reload
 docker-compose up --build
 ```
 
-###After running your FastAPI app, visit:
+### After running your FastAPI app, visit:
 
-Swagger UI: http://localhost:8000/docs
+Swagger UI: http://localhost:8000/docs,
 ReDoc: http://localhost:8000/redoc
 
 ## API Endpoints
@@ -138,38 +138,30 @@ Get timeline of posts for a specific theme.
 
 ## Future Work
 
-1. **Enhanced NLP**:
-   - Implement more sophisticated thesis extraction algorithms
-   - Add support for multiple languages
-   - Improve theme clustering accuracy
-   - Add sentiment analysis for theses
+1. **Smarter NLP**:
+   - Enhance thesis extraction with advanced algorithms and multilingual support
+   - Improve clustering quality and add sentiment insights to theses
 
 2. **Scalability Improvements**:
    - Add caching layer for frequently accessed data
    - Implement rate limiting for API endpoints
-   - Add support for batch processing of feeds
-   - Implement pagination for large result sets
+
 
 3. **Feature Additions**:
    - User authentication and authorization
-   - Custom theme creation and management
    - Advanced search capabilities
    - Analytics dashboard
-   - Webhook support for real-time updates
-   - Theme evolution tracking over time
+
 
 4. **Monitoring and Maintenance**:
    - Add comprehensive metrics collection
-   - Implement automated testing
    - Add health check endpoints
-   - Improve error handling and recovery
-   - Add database migration tools
+
 
 5. **Performance Optimization**:
    - Implement connection pooling for Neo4j
    - Add background task processing
-   - Optimize embedding generation and storage
-   - Implement efficient caching strategies
+
 
 ## Contributing
 
