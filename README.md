@@ -72,6 +72,8 @@ NEO4J_PASSWORD=<your-neo4j-password>
 
 # Set TOP_THEMES=-1 to use all sentences, or a positive integer like 2 or 5. (Default is 2)
 TOP_THEMES=2
+# Sets up the cosine similarity, use a float value between 0 and 1 (Defaults to 0.8)
+SIMILARITY_THRESHOLD=0.80
 ```
 
 ## Running the Application
